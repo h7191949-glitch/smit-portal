@@ -1,0 +1,116 @@
+.teacher-attendance-stats {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.teacher-attendance-stat {
+  min-height: 72px;
+  border: 1px solid #e9ecef;
+  border-radius: 5px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 13px;
+  box-sizing: border-box;
+}
+
+.teacher-attendance-stat-left {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.teacher-attendance-stat-left > svg {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: #a5a9ad;
+  stroke-width: 1.2;
+}
+
+.teacher-attendance-stat-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.teacher-attendance-stat-text strong {
+  font-size: 18px;
+  line-height: 1;
+  color: #22272c;
+  font-weight: 500;
+}
+
+.teacher-attendance-stat-text span {
+  font-size: 11px;
+  color: #747a80;
+}
+
+.teacher-attendance-stat-icon {
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teacher-attendance-stat-icon svg {
+  fill: none;
+  stroke-width: 1.5;
+}
+
+.teacher-attendance-stat.total
+  .teacher-attendance-stat-icon {
+  background: #f1f5f8;
+  color: #82919c;
+}
+
+.teacher-attendance-stat.present
+  .teacher-attendance-stat-icon {
+  background: #edf9f2;
+  color: #48ad76;
+}
+
+.teacher-attendance-stat.absent
+  .teacher-attendance-stat-icon {
+  background: #fff1f1;
+  color: #df7474;
+}
+
+.teacher-attendance-stat.leave
+  .teacher-attendance-stat-icon {
+  background: #fff8e8;
+  color: #d9a63d;
+}
+
+.teacher-attendance-stat.present
+  .teacher-attendance-stat-icon svg {
+  stroke: #48ad76;
+}
+
+.teacher-attendance-stat.absent
+  .teacher-attendance-stat-icon svg {
+  stroke: #df7474;
+}
+
+.teacher-attendance-stat.leave
+  .teacher-attendance-stat-icon svg {
+  stroke: #d9a63d;
+}
+
+@media (max-width: 800px) {
+  .teacher-attendance-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .teacher-attendance-stats {
+    grid-template-columns: 1fr;
+  }
+}

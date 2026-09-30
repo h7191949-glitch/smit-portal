@@ -1,0 +1,57 @@
+.teacher-attendance-page-content {
+  width: 100%;
+  min-height: 100vh;
+  padding: 24px 18px 40px;
+  box-sizing: border-box;
+}
+
+.teacher-attendance-date-row {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.teacher-date-control {
+  width: 132px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.teacher-date-control label {
+  color: #555b61;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.teacher-date-control input {
+  width: 132px;
+  height: 29px;
+  box-sizing: border-box;
+  padding: 0 7px;
+  border: 1px solid #e4e7ea;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #555b61;
+  font-size: 10px;
+  outline: none;
+}
+
+.teacher-date-control input:focus {
+  border-color: #cdd2d7;
+}
+
+@media (max-width: 600px) {
+  .teacher-attendance-page-content {
+    padding: 22px 10px 30px;
+  }
+
+  .teacher-date-control {
+    width: 135px;
+  }
+
+  .teacher-date-control input {
+    width: 135px;
+  }
+}

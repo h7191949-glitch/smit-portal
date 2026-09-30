@@ -1,0 +1,139 @@
+.teacher-sidebar {
+  width: 52px;
+  min-width: 52px;
+  height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #edf0f3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  transition: width 0.2s ease;
+}
+
+.teacher-sidebar.expanded {
+  width: 190px;
+  align-items: stretch;
+}
+
+.teacher-sidebar-top {
+  width: 100%;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #f1f3f5;
+}
+
+.teacher-sidebar-collapse {
+  width: 34px;
+  height: 34px;
+  border: none;
+  background: transparent;
+  color: #7d838b;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  padding: 0;
+}
+
+.teacher-sidebar-collapse:hover {
+  color: #22272c;
+}
+
+.teacher-sidebar-menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+  padding-top: 17px;
+}
+
+.teacher-sidebar.expanded .teacher-sidebar-menu {
+  align-items: stretch;
+  padding: 17px 10px 0;
+}
+
+.teacher-sidebar-item {
+  width: 38px;
+  height: 38px;
+  border: none;
+  background: transparent;
+  color: #6f747b;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  gap: 11px;
+}
+
+.teacher-sidebar.expanded .teacher-sidebar-item {
+  width: 100%;
+  justify-content: flex-start;
+  padding: 0 12px;
+}
+
+.teacher-sidebar-item:hover {
+  background: #f5f7f9;
+  color: #20242a;
+}
+
+.teacher-sidebar-item.active {
+  background: #f1f4f7;
+  color: #1d2228;
+}
+
+.teacher-sidebar-item span {
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.teacher-sidebar-profile {
+  width: 32px;
+  height: 32px;
+  border: none;
+  padding: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  background: transparent;
+  cursor: pointer;
+  margin-top: auto;
+  margin-bottom: 14px;
+  align-self: center;
+}
+
+.teacher-sidebar.profile-expanded .teacher-sidebar-profile {
+  align-self: flex-start;
+  margin-left: 14px;
+}
+
+.teacher-sidebar-profile img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .teacher-sidebar {
+    width: 51px;
+    min-width: 51px;
+  }
+
+  .teacher-sidebar.expanded {
+    width: 180px;
+  }
+
+  .teacher-sidebar-item {
+    width: 36px;
+    height: 36px;
+  }
+}

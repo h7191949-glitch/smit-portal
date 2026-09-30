@@ -1,0 +1,130 @@
+.quiz-layout {
+  display: flex;
+
+  width: 100%;
+  min-height: 100vh;
+
+  background: #f8f9fa;
+}
+
+/* Sidebar fixed hone ki wajah se main ko space dena zaroori hai */
+.quiz-main {
+  width: calc(100% - 170px);
+  min-width: 0;
+  min-height: 100vh;
+
+  margin-left: 170px;
+
+  background: #f8f9fa;
+}
+
+.quiz-page {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 25px 20px 40px;
+
+  text-align: left;
+}
+
+/* Breadcrumb */
+
+.quiz-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-bottom: 26px;
+
+  color: #6d737b;
+
+  font-size: 13px;
+
+  text-align: left;
+}
+
+.quiz-breadcrumb-arrow {
+  color: #8b9198;
+
+  font-size: 18px;
+  line-height: 1;
+}
+
+.quiz-breadcrumb strong {
+  color: #333333;
+
+  font-weight: 500;
+}
+
+/* Important Information ko left aligned rakho */
+
+.quiz-page .quiz-information {
+  text-align: left;
+}
+
+.quiz-page .quiz-information-title {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.quiz-page .quiz-information-list {
+  text-align: left;
+}
+
+/* Instructor message */
+
+.quiz-instructor-message {
+  margin: 20px 0 0;
+
+  color: #777777;
+
+  font-size: 13px;
+
+  text-align: center;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .quiz-main {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .quiz-page {
+    padding: 20px 14px 35px;
+  }
+
+  .quiz-breadcrumb {
+    margin-bottom: 20px;
+
+    gap: 7px;
+
+    font-size: 12px;
+  }
+
+  .quiz-instructor-message {
+    font-size: 12px;
+
+    line-height: 19px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .quiz-main {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .quiz-page {
+    padding: 16px 10px 30px;
+  }
+
+  .quiz-breadcrumb {
+    margin-bottom: 16px;
+  }
+}

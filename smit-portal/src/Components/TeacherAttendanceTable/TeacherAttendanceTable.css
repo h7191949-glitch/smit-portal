@@ -1,0 +1,160 @@
+.teacher-attendance-table-section {
+  width: 100%;
+  margin-top: 10px;
+  background: #ffffff;
+  border: 1px solid #edf0f3;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.teacher-attendance-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.teacher-attendance-table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.attendance-roll-column {
+  width: 25%;
+}
+
+.attendance-name-column {
+  width: 50%;
+}
+
+.attendance-status-column {
+  width: 25%;
+}
+
+.teacher-attendance-table th {
+  height: 37px;
+  padding: 0 9px;
+  background: #ffffff;
+  border-bottom: 1px solid #eceef1;
+  color: #757b82;
+  font-size: 11px;
+  font-weight: 500;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.teacher-attendance-table td {
+  height: 34px;
+  padding: 0 9px;
+  border-bottom: 1px solid #f0f1f3;
+  color: #555b62;
+  font-size: 11px;
+  font-weight: 400;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.teacher-attendance-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.attendance-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 72px;
+  height: 18px;
+  padding: 0 7px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 8px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.attendance-status.present {
+  color: #4c9f6d;
+  background: #effaf3;
+  border: 1px solid #ccebd8;
+}
+
+.attendance-status.absent {
+  color: #c96d6d;
+  background: #fff3f3;
+  border: 1px solid #f1d3d3;
+}
+
+.attendance-status.leave {
+  color: #b28738;
+  background: #fff9eb;
+  border: 1px solid #f1dfb4;
+}
+
+.attendance-status.not-marked {
+  color: #7a7f84;
+  background: #f7f7f7;
+  border: 1px solid #e5e5e5;
+}
+
+/* PAGINATION */
+
+.teacher-attendance-pagination {
+  min-height: 49px;
+  padding: 0 9px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.attendance-record-count {
+  color: #626970;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.attendance-page-controls {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.attendance-page-controls button {
+  min-width: 28px;
+  height: 27px;
+  border: none;
+  background: transparent;
+  color: #737980;
+  border-radius: 4px;
+  font-size: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.attendance-page-controls button:hover:not(:disabled) {
+  background: #f5f6f7;
+}
+
+.attendance-page-controls button:disabled {
+  color: #c7cbd0;
+  cursor: default;
+}
+
+.attendance-page-controls button.active {
+  border: 1px solid #e1e4e7;
+  background: #ffffff;
+  color: #4d5359;
+}
+
+.attendance-page-controls > span {
+  color: #777d83;
+  font-size: 10px;
+}
+
+@media (max-width: 600px) {
+  .teacher-attendance-pagination {
+    min-width: 600px;
+  }
+}

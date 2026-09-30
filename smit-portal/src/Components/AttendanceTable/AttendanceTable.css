@@ -1,0 +1,152 @@
+.attendance-records {
+  width: 100%;
+}
+
+/* =========================================
+   MONTH FILTER
+========================================= */
+
+.attendance-filter {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.attendance-filter select {
+  width: 139px;
+  height: 29px;
+  padding: 0 10px;
+
+  background: #ffffff;
+  border: 1px solid #dfe4e9;
+  border-radius: 5px;
+
+  color: #334155;
+  font-size: 12px;
+
+  outline: none;
+  cursor: pointer;
+}
+
+.attendance-filter select:focus {
+  border-color: #cbd5e1;
+}
+
+/* =========================================
+   TABLE
+========================================= */
+
+.attendance-table-wrapper {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e1e5ea;
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.attendance-table th {
+  height: 35px;
+  padding: 0 7px;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e1e5ea;
+
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.attendance-table td {
+  height: 33px;
+  padding: 0 7px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  color: #111827;
+  font-size: 12px;
+}
+
+.attendance-table tr:last-child td {
+  border-bottom: none;
+}
+
+.attendance-table th:nth-child(1),
+.attendance-table td:nth-child(1) {
+  width: 18%;
+}
+
+.attendance-table th:nth-child(2),
+.attendance-table td:nth-child(2) {
+  width: 47%;
+}
+
+.attendance-table th:nth-child(3),
+.attendance-table td:nth-child(3) {
+  width: 35%;
+}
+
+/* =========================================
+   STATUS
+========================================= */
+
+.attendance-status {
+  display: inline-flex;
+  align-items: center;
+
+  height: 20px;
+  padding: 0 8px;
+
+  border-radius: 5px;
+
+  font-size: 9px;
+  font-weight: 500;
+}
+
+.present-status {
+  background: #effaf3;
+  border: 1px solid #d4f0dd;
+  color: #15803d;
+}
+
+.absent-status {
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  color: #dc2626;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 700px) {
+  .attendance-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .attendance-table {
+    min-width: 550px;
+  }
+
+  .attendance-filter {
+    margin-bottom: 8px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .attendance-filter select {
+    width: 125px;
+    height: 30px;
+  }
+}

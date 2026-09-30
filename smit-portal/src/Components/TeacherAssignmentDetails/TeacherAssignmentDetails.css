@@ -1,0 +1,124 @@
+.teacher-assignment-details-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1001;
+  background: rgba(20, 24, 28, 0.38);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.teacher-assignment-details-modal {
+  width: min(520px, 100%);
+  background: #ffffff;
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.16);
+}
+
+.teacher-assignment-details-header {
+  padding: 18px 20px 14px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #edf0f2;
+}
+
+.teacher-assignment-details-header h2 {
+  margin: 0;
+  color: #252a2f;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.teacher-assignment-details-header p {
+  margin: 5px 0 0;
+  color: #858b91;
+  font-size: 10px;
+}
+
+.teacher-assignment-details-close {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  color: #747b82;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.teacher-assignment-details-body {
+  padding: 20px;
+}
+
+.teacher-detail-full {
+  margin-bottom: 18px;
+}
+
+.teacher-detail-full > span,
+.teacher-detail-grid span {
+  display: block;
+  margin-bottom: 6px;
+  color: #8a9096;
+  font-size: 10px;
+}
+
+.teacher-detail-full strong,
+.teacher-detail-grid strong {
+  color: #444b52;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.teacher-detail-full p {
+  margin: 0;
+  color: #62686e;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.teacher-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+
+.teacher-detail-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.teacher-detail-topics span {
+  padding: 4px 7px;
+  border-radius: 4px;
+  background: #eaf2ff;
+  border: 1px solid #cbdcf7;
+  color: #4676b7;
+  font-size: 9px;
+}
+
+.teacher-detail-topics em {
+  color: #999fa5;
+  font-size: 10px;
+}
+
+.teacher-assignment-details-footer {
+  padding: 12px 20px;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #edf0f2;
+}
+
+.teacher-assignment-details-footer button {
+  height: 33px;
+  padding: 0 15px;
+  border: none;
+  border-radius: 4px;
+  background: #2469ed;
+  color: #ffffff;
+  font-size: 10px;
+  cursor: pointer;
+}

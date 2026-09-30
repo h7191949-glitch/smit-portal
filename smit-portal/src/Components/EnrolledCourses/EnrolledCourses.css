@@ -1,0 +1,60 @@
+.enrolled-title {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.enrolled-title > div {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.course-count {
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e6efff;
+
+  color: #2469ed;
+
+  font-size: 10px;
+}
+
+.course-item {
+  padding: 12px 13px;
+
+  border-left: 3px solid #2c73ed;
+  border-radius: 0 5px 5px 0;
+
+  background: #eef5ff;
+}
+
+.course-name {
+  margin-bottom: 7px;
+
+  color: #52657d;
+
+  font-size: 11px;
+}
+
+.course-status {
+  display: inline-flex;
+
+  padding: 3px 9px;
+
+  border: 1px solid #2e91e8;
+  border-radius: 4px;
+
+  color: #1772c4;
+
+  font-size: 10px;
+}

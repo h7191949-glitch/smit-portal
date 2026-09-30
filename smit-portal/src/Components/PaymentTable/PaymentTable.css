@@ -1,0 +1,164 @@
+.payment-table-section {
+  width: 100%;
+}
+
+.payment-table-wrapper {
+  width: 100%;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e5ea;
+  border-radius: 9px;
+
+  overflow: hidden;
+}
+
+.payment-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+}
+
+.payment-table th {
+  height: 35px;
+
+  padding: 0 7px;
+
+  border-bottom: 1px solid #e1e5ea;
+
+  color: #64748b;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  text-align: left;
+}
+
+.payment-table td {
+  height: 41px;
+
+  padding: 0 7px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  color: #111827;
+
+  font-size: 12px;
+
+  vertical-align: middle;
+}
+
+.payment-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Column sizes */
+
+.payment-table th:nth-child(1),
+.payment-table td:nth-child(1) {
+  width: 14%;
+}
+
+.payment-table th:nth-child(2),
+.payment-table td:nth-child(2) {
+  width: 14%;
+}
+
+.payment-table th:nth-child(3),
+.payment-table td:nth-child(3) {
+  width: 12%;
+}
+
+.payment-table th:nth-child(4),
+.payment-table td:nth-child(4) {
+  width: 20%;
+}
+
+.payment-table th:nth-child(5),
+.payment-table td:nth-child(5) {
+  width: 27%;
+}
+
+.payment-table th:nth-child(6),
+.payment-table td:nth-child(6) {
+  width: 13%;
+}
+
+/* =================================
+   VOUCHER
+================================= */
+
+.voucher-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.copy-button {
+  width: 36px;
+  height: 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border: 1px solid #d9dee5;
+  border-radius: 5px;
+
+  color: #111827;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+}
+
+.copy-button:hover {
+  background: #f8fafc;
+}
+
+/* =================================
+   PAID
+================================= */
+
+.paid-status {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 39px;
+  height: 20px;
+
+  padding: 0 7px;
+
+  background: #e7faf0;
+
+  border: 1px solid #8ce3b2;
+
+  border-radius: 5px;
+
+  color: #087f43;
+
+  font-size: 9px;
+  font-weight: 500;
+}
+
+/* =================================
+   TABLET / MOBILE
+================================= */
+
+@media (max-width: 800px) {
+  .payment-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .payment-table {
+    min-width: 850px;
+  }
+}

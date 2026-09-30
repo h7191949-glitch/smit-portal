@@ -1,0 +1,409 @@
+.teacher-assignment-table-card {
+  width: 100%;
+  margin-top: 10px;
+
+  background: #ffffff;
+
+  border: 1px solid #e8ebee;
+  border-radius: 4px;
+
+  overflow: visible;
+}
+
+.teacher-assignment-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+  overflow-y: visible;
+
+  scrollbar-width: none;
+}
+
+.teacher-assignment-table-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.teacher-assignment-table {
+  width: 100%;
+  min-width: 760px;
+
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+/* =========================
+   COLUMNS
+========================= */
+
+.assignment-title-col {
+  width: 20%;
+}
+
+.assignment-description-col {
+  width: 28%;
+}
+
+.assignment-topics-col {
+  width: 24%;
+}
+
+.assignment-date-col {
+  width: 16%;
+}
+
+.assignment-actions-col {
+  width: 12%;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.teacher-assignment-table th {
+  height: 38px;
+
+  padding: 0 10px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e9ecef;
+
+  color: #737980;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  text-align: left;
+  vertical-align: middle;
+
+  white-space: nowrap;
+}
+
+/* =========================
+   CELLS
+========================= */
+
+.teacher-assignment-table td {
+  height: 50px;
+
+  padding: 8px 10px;
+
+  border-bottom: 1px solid #eeeeef;
+
+  color: #555b62;
+
+  font-size: 11px;
+
+  text-align: left;
+  vertical-align: middle;
+}
+
+.teacher-assignment-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================
+   HACKATHON
+========================= */
+
+.hackathon-row {
+  background: #fcf3ff;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.assignment-title-cell {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 4px;
+}
+
+.assignment-title {
+  display: block;
+
+  width: 100%;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  color: #42484e;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-align: left;
+}
+
+.hackathon-label {
+  display: inline-flex;
+  align-items: center;
+
+  width: fit-content;
+
+  padding: 3px 6px;
+
+  border-radius: 3px;
+
+  background: #ead7ff;
+  color: #9864ca;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 0.04em;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.assignment-description {
+  display: block;
+
+  width: 100%;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  color: #62686e;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+
+  text-align: left;
+}
+
+/* =========================
+   TOPICS
+========================= */
+
+.assignment-topic-list {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  flex-wrap: nowrap;
+
+  gap: 4px;
+
+  overflow: hidden;
+}
+
+.topic-badge {
+  display: inline-block;
+
+  max-width: 110px;
+
+  padding: 4px 7px;
+
+  border-radius: 4px;
+
+  background: #eaf2ff;
+
+  border: 1px solid #cbdcf7;
+
+  color: #4676b7;
+
+  font-size: 9px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.topic-count {
+  flex-shrink: 0;
+
+  min-width: 20px;
+
+  padding: 4px 5px;
+
+  border-radius: 4px;
+
+  background: #edf3fa;
+
+  color: #65788b;
+
+  font-size: 9px;
+
+  text-align: center;
+}
+
+.no-topics {
+  color: #a1a5a9;
+
+  font-size: 10px;
+}
+
+/* =========================
+   DATE
+========================= */
+
+.assignment-date {
+  display: block;
+
+  color: #62686e;
+
+  font-size: 11px;
+
+  white-space: nowrap;
+
+  text-align: left;
+}
+
+/* =========================
+   ACTIONS
+========================= */
+
+.assignment-action-buttons {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  /* IMPORTANT:
+     icons heading ke neeche,
+     far right par nahi */
+  justify-content: flex-start;
+
+  gap: 4px;
+
+  padding-left: 2px;
+}
+
+.assignment-action-menu-wrapper {
+  position: relative;
+}
+
+.assignment-action-button {
+  width: 28px;
+  height: 28px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #697078;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  border-radius: 6px;
+
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.assignment-action-button:hover {
+  background: #f3f5f7;
+  color: #2469ed;
+}
+
+.assignment-action-button svg {
+  display: block;
+
+  width: 15px;
+  height: 15px;
+
+  fill: none;
+
+  stroke: currentColor;
+
+  stroke-width: 1.5;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* =========================
+   EDIT MENU
+========================= */
+
+.assignment-action-menu {
+  position: absolute;
+
+  top: calc(100% + 5px);
+  left: 0;
+
+  min-width: 115px;
+
+  padding: 5px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 7px;
+
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+
+  z-index: 100;
+}
+
+.assignment-action-option {
+  width: 100%;
+
+  padding: 8px 10px;
+
+  border: none;
+
+  background: transparent;
+
+  border-radius: 5px;
+
+  color: #2f3741;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.assignment-action-option:hover {
+  background: #f4f8ff;
+}
+
+.assignment-action-option-delete {
+  color: #d14343;
+}
+
+.assignment-action-option-delete:hover {
+  background: #fff1f1;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .teacher-assignment-table {
+    min-width: 760px;
+  }
+
+  .teacher-assignment-table-wrapper {
+    overflow-x: auto;
+  }
+}

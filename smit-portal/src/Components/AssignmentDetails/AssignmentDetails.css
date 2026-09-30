@@ -1,0 +1,180 @@
+.assignment-modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  z-index: 9999;
+}
+
+.assignment-details-modal {
+  width: 100%;
+  max-width: 600px;
+
+  background: #ffffff;
+  border-radius: 12px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+
+  overflow: hidden;
+}
+
+.assignment-details-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding: 22px 24px;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.assignment-details-header h2 {
+  margin: 0;
+
+  color: #202124;
+
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.assignment-details-header p {
+  margin: 6px 0 0;
+
+  color: #777777;
+
+  font-size: 13px;
+}
+
+.assignment-close-btn {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #f3f4f6;
+
+  color: #555555;
+
+  font-size: 24px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.assignment-close-btn:hover {
+  background: #e9eaec;
+}
+
+.assignment-details-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 16px;
+
+  padding: 24px;
+}
+
+.detail-item {
+  padding: 15px;
+
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+
+  background: #fafafa;
+}
+
+.detail-full {
+  grid-column: 1 / -1;
+}
+
+.detail-item span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #777777;
+
+  font-size: 12px;
+}
+
+.detail-item strong {
+  display: block;
+
+  color: #222222;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.detail-status.late {
+  color: #e32929;
+}
+
+.detail-status.not-submitted {
+  color: #d18b00;
+}
+
+.assignment-details-footer {
+  display: flex;
+  justify-content: flex-end;
+
+  padding: 16px 24px;
+
+  border-top: 1px solid #eeeeee;
+}
+
+.details-close-button {
+  padding: 9px 20px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #16469c;
+
+  color: white;
+
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+.details-close-button:hover {
+  background: #123d87;
+}
+
+@media (max-width: 600px) {
+  .assignment-modal-overlay {
+    padding: 12px;
+  }
+
+  .assignment-details-header {
+    padding: 18px;
+  }
+
+  .assignment-details-body {
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
+
+  .detail-full {
+    grid-column: auto;
+  }
+
+  .assignment-details-footer {
+    padding: 14px 18px;
+  }
+}

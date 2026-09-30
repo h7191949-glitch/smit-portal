@@ -1,0 +1,64 @@
+.schedule-card {
+  background: #fff;
+
+  border: 1px solid #e1e5e9;
+  border-radius: 9px;
+
+  padding: 13px 9px 18px;
+}
+
+.schedule-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 0 5px 15px;
+
+  color: #111827;
+  font-size: 14px;
+}
+
+.schedule-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 7px;
+}
+
+.schedule-days button {
+  min-width: 0;
+  height: 44px;
+
+  border: 1px solid #d9dee4;
+  border-radius: 5px;
+
+  background: #fff;
+  color: #334155;
+
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2px;
+}
+
+.schedule-days button span {
+  font-size: 9px;
+}
+
+.schedule-days button strong {
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.schedule-days button:hover {
+  background: #f2f8f5;
+}
+
+.schedule-days button.selected {
+  background: #20bf67;
+  border-color: #20bf67;
+  color: white;
+}

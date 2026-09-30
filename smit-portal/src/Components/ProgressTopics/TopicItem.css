@@ -1,0 +1,366 @@
+.topic-item {
+  width: 100%;
+
+  background: #ffffff;
+
+  border: 1px solid #e0e4e8;
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   TOPIC ROW
+========================= */
+
+.topic-row {
+  width: 100%;
+  min-height: 63px;
+
+  border: none;
+  background: transparent;
+
+  padding: 8px 13px;
+
+  display: flex;
+  align-items: center;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+}
+
+.topic-row:hover {
+  background: #fbfcfd;
+}
+
+
+/* =========================
+   STATUS ICON
+========================= */
+
+.topic-status {
+  width: 25px;
+  height: 25px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 14px;
+}
+
+.topic-status svg {
+  width: 16px;
+  height: 16px;
+
+  fill: none;
+
+  stroke: currentColor;
+
+  stroke-width: 2;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.topic-status.completed {
+  background: #d9fae8;
+  color: #10c76a;
+}
+
+.topic-status.pending {
+  background: #fff5c9;
+  color: #f0b900;
+}
+
+
+/* =========================
+   TOPIC INFORMATION
+========================= */
+
+.topic-information {
+  flex: 1;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.topic-information strong {
+  color: #111827;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  line-height: 1.3;
+
+  margin-bottom: 2px;
+}
+
+.topic-information small {
+  color: #526173;
+
+  font-size: 12px;
+
+  line-height: 1.3;
+}
+
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.topic-right {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-left: 15px;
+}
+
+
+/* =========================
+   CIRCLE
+========================= */
+
+.topic-progress-circle {
+  position: relative;
+
+  width: 39px;
+  height: 39px;
+
+  flex-shrink: 0;
+}
+
+.topic-progress-circle svg {
+  width: 39px;
+  height: 39px;
+
+  transform: rotate(-90deg);
+}
+
+.topic-circle-background {
+  fill: none;
+
+  stroke: #e3e7eb;
+
+  stroke-width: 3;
+}
+
+.topic-circle-progress {
+  fill: none;
+
+  stroke: #3d85ed;
+
+  stroke-width: 3;
+
+  stroke-linecap: round;
+
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+.topic-progress-circle span {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  color: #2875df;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+
+/* ZERO */
+
+.topic-zero {
+  width: 39px;
+
+  text-align: center;
+
+  color: #111827;
+
+  font-size: 12px;
+}
+
+
+/* =========================
+   ARROW
+========================= */
+
+.topic-arrow {
+  color: #737b86;
+
+  font-size: 17px;
+
+  transition: transform 0.2s ease;
+}
+
+.topic-arrow.arrow-up {
+  transform: rotate(180deg);
+}
+
+
+/* =========================
+   EXPANDED CONTENT
+========================= */
+
+.topic-expanded {
+  border-top: 1px solid #edf0f3;
+
+  background: #fafbfc;
+
+  padding: 12px 55px;
+
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.expanded-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.expanded-content span {
+  color: #667085;
+
+  font-size: 11px;
+}
+
+.expanded-content strong {
+  color: #111827;
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 700px) {
+
+  .topic-row {
+    min-height: 60px;
+
+    padding: 8px 10px;
+  }
+
+  .topic-status {
+    margin-right: 10px;
+  }
+
+  .topic-information strong {
+    font-size: 14px;
+  }
+
+  .topic-information small {
+    font-size: 11px;
+  }
+
+  .topic-right {
+    gap: 7px;
+  }
+
+  .topic-progress-circle {
+    width: 35px;
+    height: 35px;
+  }
+
+  .topic-progress-circle svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .topic-zero {
+    width: 35px;
+  }
+
+  .topic-expanded {
+    padding: 12px 20px;
+    gap: 25px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .topic-row {
+    min-height: 58px;
+  }
+
+  .topic-status {
+    width: 23px;
+    height: 23px;
+
+    margin-right: 8px;
+  }
+
+  .topic-status svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .topic-information strong {
+    font-size: 12px;
+  }
+
+  .topic-information small {
+    font-size: 10px;
+  }
+
+  .topic-right {
+    margin-left: 5px;
+    gap: 4px;
+  }
+
+  .topic-progress-circle {
+    width: 32px;
+    height: 32px;
+  }
+
+  .topic-progress-circle svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .topic-progress-circle span {
+    font-size: 8px;
+  }
+
+  .topic-zero {
+    width: 28px;
+  }
+
+  .topic-arrow {
+    font-size: 15px;
+  }
+
+  .topic-expanded {
+    padding: 10px 15px;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+  }
+}

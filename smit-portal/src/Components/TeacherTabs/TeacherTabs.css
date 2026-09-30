@@ -1,0 +1,58 @@
+.teacher-tabs {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border-bottom: 1px solid #eceef1;
+  margin-top: 19px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.teacher-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.teacher-tab {
+  position: relative;
+  height: 35px;
+  border: none;
+  background: transparent;
+  color: #626870;
+  padding: 0 1px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.teacher-tab:hover {
+  color: #24282d;
+}
+
+.teacher-tab.active {
+  color: #272b30;
+}
+
+.teacher-tab.active::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background: #4f91d9;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  border-radius: 2px 2px 0 0;
+}
+
+@media (max-width: 600px) {
+  .teacher-tabs {
+    gap: 15px;
+  }
+
+  .teacher-tab {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,154 @@
+.payment-instructions {
+  width: 100%;
+  min-height: 220px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding: 28px 15px 12px;
+
+  box-sizing: border-box;
+
+  background: #eef4ff;
+
+  border-radius: 8px;
+
+  margin-bottom: 24px;
+
+  text-align: left;
+}
+
+/* ================================
+   INSTRUCTIONS - LEFT SIDE
+================================ */
+
+.payment-instruction-content {
+  flex: 1;
+  min-width: 0;
+
+  text-align: left;
+}
+
+.payment-instruction-content h2 {
+  margin: 0 0 10px;
+
+  color: #16469c;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  text-align: left;
+}
+
+.payment-instruction-content ol {
+  margin: 0;
+  padding-left: 28px;
+
+  color: #16469c;
+
+  font-size: 13px;
+  line-height: 24px;
+
+  text-align: left;
+}
+
+.payment-instruction-content li {
+  padding-left: 2px;
+
+  text-align: left;
+}
+
+/* ================================
+   VIDEO - RIGHT SIDE
+================================ */
+
+.payment-video-box {
+  width: 110px;
+  height: 196px;
+
+  flex-shrink: 0;
+
+  background: #111827;
+
+  border-radius: 5px;
+
+  overflow: hidden;
+}
+
+.payment-video {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  background: #111827;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 700px) {
+  .payment-instructions {
+    min-height: auto;
+
+    padding: 22px 15px;
+
+    gap: 20px;
+  }
+
+  .payment-instruction-content h2 {
+    font-size: 12px;
+  }
+
+  .payment-instruction-content ol {
+    font-size: 12px;
+    line-height: 22px;
+  }
+
+  .payment-video-box {
+    width: 90px;
+    height: 160px;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 500px) {
+  .payment-instructions {
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 20px 15px;
+
+    gap: 18px;
+  }
+
+  .payment-instruction-content {
+    width: 100%;
+  }
+
+  .payment-instruction-content h2 {
+    font-size: 12px;
+  }
+
+  .payment-instruction-content ol {
+    padding-left: 23px;
+
+    font-size: 11px;
+    line-height: 21px;
+  }
+
+  .payment-video-box {
+    width: 120px;
+    height: 213px;
+  }
+}

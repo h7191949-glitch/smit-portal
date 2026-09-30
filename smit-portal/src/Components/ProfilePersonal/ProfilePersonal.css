@@ -1,0 +1,20 @@
+.profile-personal-card {
+  width: 100%;
+}
+
+.personal-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  column-gap: 80px;
+  row-gap: 20px;
+}
+
+@media (max-width: 600px) {
+  .personal-grid {
+    grid-template-columns: 1fr;
+
+    gap: 17px;
+  }
+}
