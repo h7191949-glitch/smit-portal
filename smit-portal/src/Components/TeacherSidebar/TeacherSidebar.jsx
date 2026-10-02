@@ -25,6 +25,11 @@ function TeacherSidebar({
       icon: "assignment",
       page: "teacherAssignments",
     },
+    {
+      name: "Quizzes",
+      icon: "quiz",
+      page: "teacherQuizzes",
+    },
   ];
 
   const handleCollapse = () => {
@@ -66,8 +71,16 @@ function TeacherSidebar({
         ))}
       </nav>
 
-      <button type="button" className="teacher-sidebar-profile">
-        <img src="/profile.jpg" alt="Teacher Profile" />
+      <button
+        type="button"
+        className={`teacher-sidebar-profile ${
+          currentPage === "teacherProfile" ? "profile-active" : ""
+        }`}
+        onClick={() => onNavigate && onNavigate("teacherProfile")}
+        aria-label="Open teacher profile"
+        aria-current={currentPage === "teacherProfile" ? "page" : undefined}
+      >
+        <img src="/logo3.png" alt="Teacher Profile" />
       </button>
     </aside>
   );

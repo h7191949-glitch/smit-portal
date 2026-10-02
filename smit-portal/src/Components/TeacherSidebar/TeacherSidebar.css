@@ -122,6 +122,11 @@
   object-fit: cover;
 }
 
+.teacher-sidebar-profile.profile-active {
+  outline: 2px solid #2869e8;
+  outline-offset: 2px;
+}
+
 @media (max-width: 600px) {
   .teacher-sidebar {
     width: 51px;

@@ -1,0 +1,60 @@
+.profile-card {
+  box-sizing: border-box;
+
+  padding: 17px;
+
+  border: 1px solid #e1e4e8;
+  border-radius: 9px;
+
+  background: #ffffff;
+}
+
+.profile-card-title {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 17px;
+}
+
+.profile-card-title h2 {
+  margin: 0;
+
+  color: #101010;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.profile-card-icon {
+  color: #2469ed;
+
+  font-size: 16px;
+}
+
+.profile-contact-content {
+  display: flex;
+  flex-direction: column;
+
+  gap: 17px;
+}
+
+.profile-field span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #777;
+
+  font-size: 11px;
+}
+
+.profile-field strong {
+  display: block;
+
+  color: #1c2940;
+
+  font-size: 12px;
+  font-weight: 400;
+}

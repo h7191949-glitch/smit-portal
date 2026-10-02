@@ -1,27 +1,29 @@
 import React from "react";
 import "./EnrolledCourses.css";
 
-function EnrolledCourses() {
+function EnrolledCourses({
+  title = "Enrolled Courses",
+  courses = ["Modern Web Application Development"],
+  status = "ENROLLED",
+}) {
   return (
     <section className="profile-card enrolled-courses-card">
       <div className="profile-card-title enrolled-title">
         <div>
           <span className="profile-card-icon">▣</span>
-          <h2>Enrolled Courses</h2>
+          <h2>{title}</h2>
         </div>
 
-        <span className="course-count">1</span>
+        <span className="course-count">{courses.length}</span>
       </div>
 
-      <div className="course-item">
-        <div className="course-name">
-          Modern Web Application Development
+      {courses.map((course) => (
+        <div className="course-item" key={course}>
+          <div className="course-name">{course}</div>
+
+          <span className="course-status">{status}</span>
         </div>
-
-        <span className="course-status">
-          ENROLLED
-        </span>
-      </div>
+      ))}
     </section>
   );
 }

@@ -1,0 +1,97 @@
+.teacher-progress-overview-card {
+  padding: 13px 14px 10px;
+  border: 1px solid #edf0f2;
+  border-radius: 5px;
+  background: #ffffff;
+}
+
+.teacher-progress-section-eyebrow {
+  margin-bottom: 4px;
+  color: #69727b;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.teacher-progress-overview-card h2 {
+  margin: 0 0 9px;
+  color: #252a2f;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.teacher-progress-view-toggle {
+  width: 100%;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid #e7ebee;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #454c53;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.teacher-progress-view-toggle:hover,
+.teacher-progress-view-toggle[aria-pressed="true"] {
+  border-color: #cbdcf0;
+  background: #f6f9fc;
+}
+
+.teacher-progress-view-toggle svg {
+  flex: 0 0 auto;
+}
+
+.teacher-progress-comparison {
+  margin-top: 11px;
+  padding: 11px 12px;
+  border-radius: 5px;
+  background: #f8fafc;
+}
+
+.teacher-progress-comparison-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #525b64;
+  font-size: 12px;
+}
+
+.teacher-progress-comparison-heading strong {
+  color: #2869e8;
+  font-size: 13px;
+}
+
+.teacher-progress-comparison-track {
+  height: 5px;
+  margin-top: 7px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #e2e5e8;
+}
+
+.teacher-progress-comparison-track span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #4387e8;
+}
+
+.teacher-progress-comparison p {
+  margin: 8px 0 0;
+  color: #737c84;
+  font-size: 11px;
+}
+
+@media (max-width: 600px) {
+  .teacher-progress-overview-card {
+    padding: 12px 11px 10px;
+  }
+
+  .teacher-progress-overview-card h2 {
+    font-size: 15px;
+  }
+}

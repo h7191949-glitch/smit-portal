@@ -1,0 +1,108 @@
+.teacher-student-progress-card {
+  padding: 14px;
+  border: 1px solid #edf0f2;
+  border-radius: 5px;
+  background: #ffffff;
+}
+
+.teacher-student-progress-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.teacher-student-identity {
+  min-width: 0;
+}
+
+.teacher-student-name-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.teacher-student-name-row h2 {
+  margin: 0;
+  color: #282d32;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.teacher-student-batch {
+  padding: 3px 7px;
+  border: 1px solid #e6e9ec;
+  border-radius: 10px;
+  color: #4d555e;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.teacher-student-schedule {
+  margin: 5px 0 0;
+  color: #747d85;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.teacher-student-topic-count {
+  flex: 0 0 auto;
+  padding: 5px 8px;
+  border-radius: 4px;
+  background: #f0f5fb;
+  color: #386a9f;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.teacher-student-overall-progress {
+  margin: 14px 0 16px;
+}
+
+.teacher-student-overall-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  color: #59616a;
+  font-size: 12px;
+}
+
+.teacher-student-overall-label strong {
+  color: #356ca9;
+  font-size: 12px;
+}
+
+.teacher-student-overall-track {
+  height: 6px;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #e2e5e8;
+}
+
+.teacher-student-overall-track span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #4489e9;
+}
+
+@media (max-width: 600px) {
+  .teacher-student-progress-card {
+    padding: 12px 10px;
+  }
+
+  .teacher-student-progress-header {
+    flex-direction: column;
+  }
+
+  .teacher-student-name-row h2 {
+    font-size: 14px;
+  }
+
+  .teacher-student-schedule {
+    font-size: 11px;
+  }
+}

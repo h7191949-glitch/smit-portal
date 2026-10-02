@@ -78,6 +78,49 @@ function Icon({ name, size = 18 }) {
       </>
     ),
 
+    search: (
+      <>
+        <circle cx="10.8" cy="10.8" r="6.8" />
+        <path d="M16 16l5 5" />
+      </>
+    ),
+
+    plus: (
+      <path d="M12 5v14M5 12h14" />
+    ),
+
+    edit: (
+      <>
+        <path d="M12 20h9" />
+        <path d="M16.5 3.5a2.1 2.1 0 013 3L8 18l-4 1 1-4L16.5 3.5z" />
+      </>
+    ),
+
+    eye: (
+      <>
+        <path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12z" />
+        <circle cx="12" cy="12" r="2.5" />
+      </>
+    ),
+
+    trash: (
+      <>
+        <path d="M4 7h16M10 11v6M14 11v6" />
+        <path d="M6 7l1 14h10l1-14M9 7V4h6v3" />
+      </>
+    ),
+
+    close: (
+      <path d="M6 6l12 12M18 6L6 18" />
+    ),
+
+    logout: (
+      <>
+        <path d="M10 17l5-5-5-5M15 12H3" />
+        <path d="M12 3h6a2 2 0 012 2v14a2 2 0 01-2 2h-6" />
+      </>
+    ),
+
     menu: (
       <>
         <path d="M4 7h16M4 12h16M4 17h16" />

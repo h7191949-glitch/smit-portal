@@ -1,0 +1,225 @@
+.teacher-progress-page {
+  min-height: 100vh;
+  width: 100%;
+  background: #f8fafb;
+  color: #20252a;
+}
+
+.teacher-progress-main {
+  min-height: 100vh;
+  margin-left: 52px;
+  transition: margin-left 0.2s ease;
+}
+
+.teacher-progress-page.sidebar-expanded .teacher-progress-main {
+  margin-left: 190px;
+}
+
+.teacher-progress-content {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 14px 40px;
+}
+
+.teacher-progress-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.teacher-progress-heading {
+  min-width: 0;
+}
+
+.teacher-progress-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  color: #777e86;
+  font-size: 12px;
+}
+
+.teacher-progress-breadcrumb button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.teacher-progress-breadcrumb button:hover {
+  color: #2869e8;
+}
+
+.teacher-progress-breadcrumb strong {
+  overflow: hidden;
+  color: #535a62;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.teacher-progress-heading h1 {
+  margin: 0;
+  color: #15191d;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.teacher-progress-feedback-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex: 0 0 auto;
+  height: 32px;
+  padding: 0 11px;
+  border: 1px solid #e4e7ea;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #41474e;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.teacher-progress-feedback-button:hover {
+  background: #f2f5f7;
+}
+
+.teacher-progress-panels {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.teacher-progress-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: rgb(20 30 40 / 42%);
+}
+
+.teacher-progress-feedback-modal {
+  width: min(440px, 100%);
+  padding: 20px;
+  border: 1px solid #e2e6ea;
+  border-radius: 7px;
+  background: #ffffff;
+  box-shadow: 0 16px 44px rgb(0 0 0 / 18%);
+}
+
+.teacher-progress-modal-header,
+.teacher-progress-feedback-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.teacher-progress-modal-header h2 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.teacher-progress-modal-header button {
+  border: 0;
+  background: transparent;
+  color: #626a72;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.teacher-progress-feedback-modal form {
+  display: grid;
+  gap: 9px;
+  margin-top: 18px;
+}
+
+.teacher-progress-feedback-modal label {
+  color: #444c54;
+  font-size: 13px;
+}
+
+.teacher-progress-feedback-modal textarea {
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
+  padding: 10px;
+  border: 1px solid #dce2e7;
+  border-radius: 5px;
+  font: inherit;
+}
+
+.teacher-progress-feedback-actions {
+  justify-content: flex-end;
+  margin-top: 5px;
+}
+
+.teacher-progress-feedback-actions button,
+.teacher-progress-feedback-success button {
+  min-height: 36px;
+  padding: 0 13px;
+  border: 1px solid #dce2e7;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #3f474f;
+  font: inherit;
+  cursor: pointer;
+}
+
+.teacher-progress-feedback-actions button[type="submit"],
+.teacher-progress-feedback-success button {
+  border-color: #2869e8;
+  background: #2869e8;
+  color: #ffffff;
+}
+
+.teacher-progress-feedback-success p {
+  margin: 20px 0;
+  color: #4d5964;
+}
+
+@media (max-width: 600px) {
+  .teacher-progress-page.sidebar-expanded .teacher-progress-main {
+    margin-left: 180px;
+  }
+
+  .teacher-progress-content {
+    padding: 12px 10px 30px;
+  }
+
+  .teacher-progress-header {
+    gap: 8px;
+  }
+
+  .teacher-progress-heading h1 {
+    font-size: 18px;
+  }
+
+  .teacher-progress-breadcrumb {
+    font-size: 11px;
+  }
+
+  .teacher-progress-feedback-button {
+    height: 30px;
+    padding: 0 8px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 380px) {
+  .teacher-progress-header {
+    flex-wrap: wrap;
+  }
+
+  .teacher-progress-feedback-button {
+    margin-left: auto;
+  }
+}

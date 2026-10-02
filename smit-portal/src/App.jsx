@@ -16,6 +16,10 @@ import Profile from "./pages/Profile/Profile";
 import TeacherDashboard from "./pages/TeacherDashboard/TeacherDashboard";
 import TeacherAttendance from "./pages/TeacherAttendance/TeacherAttendance";
 import TeacherAssignments from "./pages/TeacherAssignments/TeacherAssignments";
+import TeacherProfile from "./pages/TeacherProfile/TeacherProfile";
+import TeacherQuizzes from "./pages/TeacherQuizzes/TeacherQuizzes";
+import TeacherProgress from "./pages/TeacherProgress/TeacherProgress";
+import AdminPortal from "./pages/AdminPortal/AdminPortal";
 
 
 
@@ -27,7 +31,7 @@ function App() {
     return localStorage.getItem("smitLoggedIn") === "true";
   });
 
-  // Teacher/student role localStorage se bhi read hoga
+  // Role localStorage se restore hota hai
   const [loginRole, setLoginRole] = useState(() => {
     return localStorage.getItem("smitRole") || "student";
   });
@@ -37,6 +41,10 @@ function App() {
   // -----------------------------------------
   const [currentPage, setCurrentPage] = useState(() => {
     const savedRole = localStorage.getItem("smitRole");
+
+    if (savedRole === "admin") {
+      return localStorage.getItem("adminCurrentPage") || "adminDashboard";
+    }
 
     if (savedRole === "teacher") {
       return localStorage.getItem("teacherCurrentPage") || "teacherDashboard";
@@ -61,6 +69,9 @@ function App() {
         "teacherCurrentPage",
         "teacherDashboard"
       );
+    } else if (loginRole === "admin") {
+      setCurrentPage("adminDashboard");
+      localStorage.setItem("adminCurrentPage", "adminDashboard");
     } else {
       setCurrentPage("dashboard");
       localStorage.setItem(
@@ -87,6 +98,8 @@ function App() {
 
     if (loginRole === "teacher") {
       localStorage.setItem("teacherCurrentPage", page);
+    } else if (loginRole === "admin") {
+      localStorage.setItem("adminCurrentPage", page);
     } else {
       localStorage.setItem("studentCurrentPage", page);
     }
@@ -101,6 +114,7 @@ function App() {
     localStorage.removeItem("smitRole");
     localStorage.removeItem("teacherCurrentPage");
     localStorage.removeItem("studentCurrentPage");
+    localStorage.removeItem("adminCurrentPage");
 
     setIsLoggedIn(false);
     setLoginRole("student");
@@ -117,6 +131,20 @@ function App() {
         onLogin={handleLogin}
         role={loginRole}
         onRoleChange={handleRoleChange}
+      />
+    );
+  }
+
+
+  // ==================================================
+  // ADMIN SIDE
+  // ==================================================
+  if (loginRole === "admin") {
+    return (
+      <AdminPortal
+        currentPage={currentPage}
+        onNavigate={handleNavigation}
+        onLogout={handleLogout}
       />
     );
   }
@@ -148,6 +176,32 @@ function App() {
       );
     }
 
+    if (currentPage === "teacherQuizzes") {
+      return (
+        <TeacherQuizzes
+          onNavigate={handleNavigation}
+          onLogout={handleLogout}
+        />
+      );
+    }
+
+    if (currentPage === "teacherProgress") {
+      return (
+        <TeacherProgress
+          onNavigate={handleNavigation}
+          onLogout={handleLogout}
+        />
+      );
+    }
+// Teacher Profile
+if (currentPage === "teacherProfile") {
+  return (
+    <TeacherProfile
+      onNavigate={handleNavigation}
+      onLogout={handleLogout}
+    />
+  );
+}
     // Teacher Dashboard
     return (
       <TeacherDashboard
